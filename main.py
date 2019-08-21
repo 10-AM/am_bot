@@ -4,7 +4,7 @@ import discord
 from discord.ext import commands
 
 bot = commands.Bot(command_prefix=commands.when_mentioned_or("!"), description="created by taewoo kim")
-bot.add_cog(AMBot.AMBOT())
+bot.add_cog(AMBot.AMBOT(bot))
 
 @bot.event
 async def on_ready():

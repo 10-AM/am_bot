@@ -1,6 +1,21 @@
 import discord
 from discord.ext import commands
-from . import Config
-class AMBOT(commands.Cog, Config.Configs):
-    def __init__(self):
-        pass
+from Classes.BotBase import BotBase
+
+class AMBOT(BotBase):
+    def __init__(self, bot):
+        super(AMBOT, self).__init__(bot)
+
+    @commands.command(pass_context=True)
+    async def status(self, ctx):
+        #await self.send_ignore(ctx)
+        embed = self.get_base_embed("스테이터스")
+        status_dict = self.data.get_bot_status()
+        f = "활동 : {time}\n신장: {line}\n무게: {size}\n"
+        embed.description = f.format(time=status_dict["time"], line=status_dict["lines"], size=status_dict["size"])
+        await ctx.send(embed=embed)
+    
+    @commands.command(pass_context=True)
+    async def info(self, ctx):
+        await self.send_ignore(ctx)
+        

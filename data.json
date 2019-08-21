@@ -1,0 +1,8 @@
+{
+    "description":
+    {
+        "title":"정보",
+        "content":"10AM 봇입니당. 기능 건의나 문의사항이 있으면 {developer}를 호출해주세요",
+        "footer":"봇의 상태는 !status, 정보는 !info로 확인 가능합니다. 도움말은 !help"
+    }
+}
