@@ -108,3 +108,6 @@ configs.json
 .vscode/settings.json
 
 Test/
+
+configs.json
+data.json
