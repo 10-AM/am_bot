@@ -109,5 +109,4 @@ configs.json
 
 Test/
 
-configs.json
-data.json
+am_bot_data/
