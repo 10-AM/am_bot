@@ -6,7 +6,7 @@ import os
 
 class Data():
     def __init__(self):
-        with open("data.json", "r") as dataJson:
+        with open("am_bot_data/data.json", "r") as dataJson:
             self.desc_dict = json.loads(dataJson.read())['description']
         self.start_time = time.time()
 
