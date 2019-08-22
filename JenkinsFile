@@ -1,10 +1,5 @@
 {
-    agent {
-        node {
-            any
-            customWorkspace 'workspace/am_bot'
-        }
-    }
+    agent any
     stages {
         stage('pip') {
             when {
