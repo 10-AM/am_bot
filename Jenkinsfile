@@ -29,7 +29,7 @@ pipeline {
         stage('deploy') {
             when {
                 anyOf {
-                    branch 'master'
+                    branch 'master';
                 }
             }
 

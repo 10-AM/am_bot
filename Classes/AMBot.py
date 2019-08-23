@@ -17,5 +17,8 @@ class AMBOT(BotBase):
     
     @commands.command(pass_context=True)
     async def info(self, ctx):
-        await self.send_ignore(ctx)
-        
+        #await self.send_ignore(ctx)
+        embed = self.get_base_embed(self.data.desc_dict["title"])
+        embed.description = self.data.desc_dict["content"].format(developer="<@270884515952459776>")
+        embed.set_footer(text=self.data.desc_dict["footer"])
+        await ctx.send(embed=embed)

@@ -1,10 +1,12 @@
 from Classes import Config
-from Classes import AMBot
+from Classes.AMBot import AMBOT
+from Classes.DocumentBot import DocumentBot
 import discord
 from discord.ext import commands
 
 bot = commands.Bot(command_prefix=commands.when_mentioned_or("!"), description="created by taewoo kim")
-bot.add_cog(AMBot.AMBOT(bot))
+bot.add_cog(AMBOT(bot))
+bot.add_cog(DocumentBot(bot))
 
 @bot.event
 async def on_ready():
