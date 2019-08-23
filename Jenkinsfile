@@ -3,22 +3,11 @@ pipeline {
     agent any
     stages {
         stage('pip') {
-            when {
-                anyOf {
-                    branch 'master';
-                }
-            }
-            
             steps {
                 sh 'python3 -m pip install -r requirements.txt'
             }
         }
         stage('pull data') {
-            when {
-                anyOf {
-                    branch 'master';
-                }
-            }
 
             steps {
                 sh 'cd am_bot_data/'
@@ -27,11 +16,6 @@ pipeline {
             }
         }
         stage('deploy') {
-            when {
-                anyOf {
-                    branch 'master';
-                }
-            }
 
             steps {
                 sh 'python3 main.py'
